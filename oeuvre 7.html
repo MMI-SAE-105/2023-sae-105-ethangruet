@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WrightExpo</title>
     <link rel="stylesheet" href="src/css/styles.css"/>
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
-    <header>
-        <a>
-            <img src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
+    <header class="header">
+        <a href="index.html">
+          <img class="header_logo" src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
         </a>
-        <img src="public/img/icônes figma/menu-burger.png" alt="Menu burger"/>
-        <h1>WrightExpo</h1>       
-        <img src="public/img/img figma/David and Gladys Wright House 20151117 1.webp" alt="Photo David Wright House"/>
-        <h2>David Wright House à Phoenix, Arizona</h2>
+        <h1 class="header_titre header_titre-accueil">WrightExpo</h1>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header_menu-btn">
+          <img x-show="!menuIsOpen" class="header_menu-btn-ouvert" src="public/img/icônes figma/menu-burger.png" alt="Menu burger"/>
+          <img x-shox="menuIsOpen" class="header_menu-btn-fermer" src="public/img/icônes figma/croix.png" alt="Croix Menu burger"/>
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+              <li><a class="menu_lien_relatif" href="architecte.html">Frank Lloyd Wright</a></li>
+              <li><a class="menu_lien_relatif" href="architecte.html">Oeuvres majeures</a></li>
+              <li><a class="menu_lien_relatif" href="frise.html">Frise des oeuvres</a></li>
+              <li><a class="menu_lien_relatif" href="#">Billetterie</a></li>
+            </ul>
+            <img class="menu_logo" src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
+          </nav>
     </header>
     <main>
+        <img src="public/img/img figma/David and Gladys Wright House 20151117 1.webp" alt="Photo David Wright House"/>
+        <h2>David Wright House à Phoenix, Arizona</h2>
         <section>
             <h3>Quelques informations</h3>
             <p>David Wright House à Phoenix, Arizona (1952). Achevée en 1952 par Frank Lloyd Wright pour son fils David et 
