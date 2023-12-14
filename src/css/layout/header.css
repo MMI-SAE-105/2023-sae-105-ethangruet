@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    padding: 50px;
+    background-color: var(--primary);
+}
+.header__logo-link,
+.header__menu-btn {
+  position: absolute;
+}
+.header_logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.header_titre {
+    font-size: var(--text-xl);
+   text-align: center; 
+}
+.header__menu-btn {
+    float: right;
+}
