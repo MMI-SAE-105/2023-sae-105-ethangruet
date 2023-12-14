@@ -22,6 +22,20 @@ body {
     color: var(--white);
 }
 .header_menu-btn {
+    background: none;
+    border: none;
+}
+.header_menu-btn-ouvert {
+    position: relative;
+    z-index: 11;
     width: 50px;
     height: 50px;
 }
+.header_menu-btn-fermer {
+    position: absolute; 
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    top: 0; 
+    right: 0;
+}  

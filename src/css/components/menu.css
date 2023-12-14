@@ -1,0 +1,35 @@
+.menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+}
+.menu li a {
+    text-decoration: none;
+}
+nav ul li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 45px 0;
+}
+.menu_lien_relatif {
+    font-size: var(--text-xl);
+    font-family: var(--font-sans-serif);
+    font-weight: bold;
+    color: var(--primary);
+}
+.menu_logo {
+    width: 60px;
+    height: 60px;
+    padding-top: 70px;
+}
+.noscroll,
+.noscroll body {
+    overflow: hidden;
+}  

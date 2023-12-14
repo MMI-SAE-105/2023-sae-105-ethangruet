@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,23 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="header_link-logo">
+        <a href="index.html">
           <img class="header_logo" src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
         </a>
         <h1 class="header_titre header_titre-accueil">WrightExpo</h1>
-        <a href='#' class="header_link-menu-btn">
-          <img class="header_menu-btn" src="public/img/icônes figma/menu-burger.png" alt="Menu burger"/>  
-        </a>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"class="header_menu-btn">
+          <img x-show="!menuIsOpen" class="header_menu-btn-ouvert" src="public/img/icônes figma/menu-burger.png" alt="Menu burger"/>
+          <img x-shox="menuIsOpen" class="header_menu-btn-fermer" src="public/img/icônes figma/croix.png" alt="Croix Menu burger"/>
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+              <li><a class="menu_lien_relatif" href="architecte.html">Frank Lloyd Wright</a></li>
+              <li><a class="menu_lien_relatif" href="architecte.html">Oeuvres majeures</a></li>
+              <li><a class="menu_lien_relatif" href="frise.html">Frise des oeuvres</a></li>
+              <li><a class="menu_lien_relatif" href="#">Billetterie</a></li>
+            </ul>
+            <img class="menu_logo" src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
+          </nav>
     </header>
     <main class="main">
         <section>
