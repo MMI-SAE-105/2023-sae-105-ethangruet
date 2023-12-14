@@ -1,0 +1,56 @@
+.footer {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_logo {
+    width: 60px;
+    height: 60px;
+    padding-top: 25px;
+}
+.footer_lien-billetterie {
+    font-size: var(--text-l);
+    font-family: var(--font-sans-serif);
+    color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+.footer_lien-contact {
+    font-size: var(--text-l);
+    font-family: var(--font-sans-serif);
+    color: var(--white);
+    padding-top: 10px;
+    padding-bottom: 0.5px;
+    text-decoration: none;
+}
+.footer_adresse {
+    font-size: var(--text-m);
+    font-family: var(--font-sans-serif);
+    color: var(--white);
+    padding-top: 0.5px;
+    padding-bottom: 15px;
+}
+.footer_Nous-suivre {
+    font-size: var(--text-l);
+    font-family: var(--font-sans-serif);
+    color: var(--white);
+    padding-top: 15px;
+    padding-bottom: 0.5px;
+}
+.footer_logo-instagram,
+.footer_logo-X {
+    display: flex;
+    justify-content: center;
+    gap: 1rem
+}
+.footer_logo-instagram {
+    width: 30px;
+    height: 30px;
+}
+.footer_logo-X {
+    width: 30px;
+    height: 30px;
+}
