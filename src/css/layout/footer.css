@@ -8,7 +8,7 @@
 .footer_logo {
     width: 60px;
     height: 60px;
-    padding-top: 25px;
+    margin-top: 25px;
 }
 .footer_lien-billetterie {
     font-size: var(--text-l);
