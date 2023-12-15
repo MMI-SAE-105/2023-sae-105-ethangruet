@@ -47,3 +47,55 @@
     color: var(--secondary);
     margin-top: 35px;
 }
+.frise_structure {
+    background-color: var(--grey);
+    background-size: 20px;
+    margin-bottom: var(--space2x);
+    margin-top: var(--space2x);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 90%;
+    width: 50%;
+    border: none;
+} 
+.frise_date {
+    font-size: var(--text-l);
+    font-family: var(--font-sans-serif); 
+    color: var(--primary);
+    padding-left: var(--space2x);
+    padding-right: var(--space2x);
+    text-align: center;
+    font-weight: 500;
+    margin-right: 35px;
+}  
+.frise__img {
+    width: 135px;      
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 6%;
+    margin-top:-0.5%;   
+}
+figcaption {
+    font-size: var(--text-l);
+    font-family: var(--font-sans-serif); 
+    color: var(--black);
+    padding-left: var(--space2x);
+    padding-right: var(--space2x);
+    text-align: center;
+    padding-top: var(--space1x);
+}
+figcaption a {
+    color: var(--black);
+}
+.frise_lien-oeuvre {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
