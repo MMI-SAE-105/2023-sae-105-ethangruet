@@ -29,20 +29,91 @@
     </header>
     <main>
         <section>
-            <h3 class="">Présentation de Frank Lloyd Wright</h3>
-            <p>Frank Lloyd Wright (1867-1959) était un architecte américain visionnaire, célèbre pour ses contributions 
+            <img class="architecte_titre-img" src="public/img/img figma/22687662 1.webp" alt="Portrait FLW"/>
+            <h3 class="architecte_titre-page">Présentation de Frank Lloyd Wright</h3>
+            <p class="architecte-texte">Frank Lloyd Wright (1867-1959) était un architecte américain visionnaire, célèbre pour ses contributions 
                majeures au mouvement moderne. Pionnier du design organique, il a créé des œuvres emblématiques telles 
                que la maison Fallingwater et le musée Guggenheim. Wright a redéfini l'architecture en intégrant harmonieusement 
                le bâtiment avec son environnement naturel, privilégiant la simplicité et l'innovation. Son héritage perdure comme 
                une influence majeure dans le monde de l'architecture, reflétant son engagement envers l'esthétique intemporelle et la fonctionnalité novatrice.
             </p>
             <img src="public/img/img figma/Frank_Lloyd_Wright_portrait 1.webp" alt="Portrait FLW"/>
-            <p><strong>“L'architecture est la mère de tous les arts. Sans une architecture bien à nous, notre communauté n'a pas d'âme.”</strong></p>
+            <p class="architect-citation"><strong>“L'architecture est la mère de tous les arts. Sans une architecture bien à nous, notre communauté n'a pas d'âme.”</strong></p>
         </section>
         <section>
-            <h3>Ses Œuvres</h3>
-        </section>
-        <section>Frise Chronologique</section>
+            <h3 class="architecte_titre">Ses Œuvres</h3>
+            <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
+                <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"  @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    
+                    <div id="ecran-1" class="carrousel_ecran">      
+                        <figure>
+                            <img src="public/img/img figma/272520 2.webp" alt="image ecran 1">
+                            <figcaption>Maison sur la cascade ou Fallingwater, Pennsylvanie</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/01_Meijimura 1.webp" alt="image ecran 2">
+                            <figcaption>Hôtel impérial à Tokyo</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/Annunciation_Church_Apr09 1.webp" alt="image ecran 3">
+                            <figcaption>Église orthodoxe grecque de l'Annonciation à Milwaukee, Wisconsin</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/15913085796_06733cf568_z 1.webp" alt="image ecran 4">
+                            <figcaption>Musée Guggenheim, New York</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/https___proprietes.lefigaro.fr_images_PDF_CMS_actualites_118541546_1463765951 1.webp" alt="image ecran 5">
+                            <figcaption>Siège de la société Johnson Wax à Racine, Wisconsin</figcaption>
+                            <p></p>
+                        </figure>
+                    </div>
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/taliesin_west_de_nuit 1.webp" alt="image ecran 6">
+                            <figcaption>Taliesin West, Scottsdale, Arizona</figcaption>
+                            <p></p>
+                        </figure>
+                    </div>
+                    <div id="ecran-7" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/David and Gladys Wright House 20151117 1.webp" alt="image ecran 7">
+                            <figcaption>David Wright House à Phoenix, Arizona</figcaption>
+                            <p></p>
+                        </figure>
+                    </div>
+                    <div id="ecran-8" class="carrousel_ecran">
+                        <figure>
+                            <img class="img__caroussel" src="public/img/img figma/1_105306_1 1.webp" alt="image ecran 8">
+                            <figcaption>Hôtel Arizona Biltmore à Phoenix, Arizona</figcaption>
+                            <p></p>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="caroussel_liste-liens">
+                    <li><a href="#ecran-1" :class="{actif:hrefCourant==='#ecran-1'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-2" :class="{actif:hrefCourant==='#ecran-2'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-3" :class="{actif:hrefCourant==='#ecran-3'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-4" :class="{actif:hrefCourant==='#ecran-4'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-5" :class="{actif:hrefCourant==='#ecran-5'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-6" :class="{actif:hrefCourant==='#ecran-6'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-7" :class="{actif:hrefCourant==='#ecran-7'}" class="caroussel_lien"></a></li>
+                    <li><a href="#ecran-8" :class="{actif:hrefCourant==='#ecran-8'}" class="caroussel_lien"></a></li>
+                </ul>  
+
+                <section class="caroussel__bloc">
+            </section>
+        <section></section>
+        <h3 class="architecte_titre">Frise des œuvres</h3>
         <div>
             <figure>
                 <img src="public/img/img figma/01_Meijimura 1.webp" alt="Photo Meijimura"/>
