@@ -9,6 +9,7 @@
     font-weight:900;
     color: var(--secondary);
     margin-bottom: 40px;
+    text-align: center;
 }
  .contact_btn {
     background-color: var(--primary);
@@ -39,6 +40,7 @@
     margin-right: var(--space1x);
     width: 90%;
     background-color: var(--white);
+    margin-left: 20px;
 }
 textarea {
     border: none; 
@@ -55,9 +57,5 @@ textarea {
     margin-left: var(--space1x);
     width: 90%;
     background-color: var(--white);
-}
-.labelmessage {
-    display: block;
-    padding-bottom: 50px;
-    border-bottom: 2px solid var(--grey); 
+    margin-left: 20px;
 }
