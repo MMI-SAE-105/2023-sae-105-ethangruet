@@ -21,7 +21,7 @@
             <ul>
               <li><a class="menu_lien_relatif" href="architecte.html">Frank Lloyd Wright</a></li>
               <li><a class="menu_lien_relatif" href="architecte.html">Oeuvres majeures</a></li>
-              <li><a class="menu_lien_relatif" href="frise.html">Frise des oeuvres</a></li>
+              <li><a class="menu_lien_relatif" href="architecte.html">Frise des oeuvres</a></li>
               <li><a class="menu_lien_relatif" href="#">Billetterie</a></li>
             </ul>
             <img class="menu_logo" src="public/img/icônes figma/Frank Lloyd Wright, logo_ (1).png" alt="Logo WrightExpo"/>
@@ -31,17 +31,17 @@
         <section>
             <img class="architecte_titre-img" src="public/img/img figma/22687662 1.webp" alt="Portrait FLW"/>
             <h3 class="architecte_titre-page">Présentation de Frank Lloyd Wright</h3>
-            <p class="architecte-texte">Frank Lloyd Wright (1867-1959) était un architecte américain visionnaire, célèbre pour ses contributions 
+            <p class="architecte_texte">Frank Lloyd Wright (1867-1959) était un architecte américain visionnaire, célèbre pour ses contributions 
                majeures au mouvement moderne. Pionnier du design organique, il a créé des œuvres emblématiques telles 
                que la maison Fallingwater et le musée Guggenheim. Wright a redéfini l'architecture en intégrant harmonieusement 
                le bâtiment avec son environnement naturel, privilégiant la simplicité et l'innovation. Son héritage perdure comme 
                une influence majeure dans le monde de l'architecture, reflétant son engagement envers l'esthétique intemporelle et la fonctionnalité novatrice.
             </p>
-            <img src="public/img/img figma/Frank_Lloyd_Wright_portrait 1.webp" alt="Portrait FLW"/>
-            <p class="architect-citation"><strong>“L'architecture est la mère de tous les arts. Sans une architecture bien à nous, notre communauté n'a pas d'âme.”</strong></p>
+            <img class="architecte_img" src="public/img/img figma/Frank_Lloyd_Wright_portrait 1.webp" alt="Portrait FLW"/>
+            <p class="architecte_citation"><strong>“L'architecture est la mère de tous les arts. Sans une architecture bien à nous, notre communauté n'a pas d'âme.”</strong></p>
         </section>
         <section>
-            <h3 class="architecte_titre">Ses Œuvres</h3>
+            <h3 class="architecte_sous-titre">Ses Œuvres</h3>
             <div class="carrousel" x-data="{hrefCourant:'#ecran-1',}">
                 <button @click="parent = $refs.parent,parent.scrollLeft -= parent.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button @click="parent = $refs.parent,parent.scrollLeft += parent.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
                 <div class="carrousel_parent-ecrans" x-ref="parent"  @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
@@ -113,7 +113,7 @@
                 <section class="caroussel__bloc">
             </section>
         <section></section>
-        <h3 class="architecte_titre">Frise des œuvres</h3>
+        <h3 class="architecte_sous-titre">Frise des œuvres</h3>
         <div>
             <figure>
                 <img src="public/img/img figma/01_Meijimura 1.webp" alt="Photo Meijimura"/>
@@ -149,14 +149,16 @@
             </figure>
         </div>
     </main>
-    <footer>
-        <img src="public/img/icônes figma/Frank_Lloyd_Wright__logo___1_-removebg-preview.png" alt="Logo WrightExpo blanc"/>
-        <h3>Billetterie</h3>
-        <h3>Contact</h3>
-        <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-        <h3>Nous suivre</h3>
-        <img src="public/img/icônes figma/instagram-removebg-preview.png" alt="Logo Instagram"/>
-        <img src="public/img/icônes figma/X.png" alt="logo X">
+    <footer class="footer">
+        <img class="footer_logo" src="public/img/icônes figma/Frank_Lloyd_Wright__logo___1_-removebg-preview.png" alt="Logo WrightExpo blanc"/>
+        <a href="#" class="footer_lien-billetterie"><h3>Billetterie</h3></a>
+        <a href="#" class="footer_lien-contact"><h3>Contact</h3></a>
+        <p class="footer_adresse">Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+        <h3 class="footer_Nous-suivre">Nous suivre</h3>
+        <div class="footer_social-icons">
+            <img class="footer_logo-instagram" src="public/img/icônes figma/instagram-removebg-preview.png" alt="Logo Instagram"/>
+            <img class="footer_logo-X" src="public/img/icônes figma/X.png" alt="logo X">
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,49 @@
+.architecte_titre-img {
+    width: 100%;
+    height: 100%;
+}
+.architecte_titre-page {
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -270%);
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-xl);
+    color: var(--white);
+    width: 90%;
+    margin-bottom: -70px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    margin-left: 20px;
+    z-index: 9;
+}
+.architecte_texte {
+    margin: 20px;
+    margin-right: 20px;
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-m);
+    font-weight:500;
+    color: var(--black);
+    text-align: justify;
+} 
+.architecte_img {
+    width: 80%;
+    height: 80%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.architecte_citation {
+    margin: 20px;
+    text-align: center;
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-m);
+    font-weight:500;
+    color: var(--black);
+}
+.architecte_sous-titre {
+    margin: 20px;
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-l);
+    font-weight:900;
+    color: var(--secondary);
+    margin-top: 35px;
+}
